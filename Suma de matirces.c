@@ -27,13 +27,17 @@ for(i=0;i<3;i++){
 	  
   	printf("= ");
   }else{
-  	printf("\t");
+  	printf(" \t");
   }
 	for(j=0;j<3;j++){
       	t=M1[i][j]+M2[i][j];
       	M3[i][j]=t;
-      	printf("%d ", M3[i][j]);
-      	t=0;
+      	if(M3[i][j]>9){
+      		printf("%d ", M3[i][j]);
+		  }else{
+		  printf("%d  ", M3[i][j]);
+	}
+		t=0;
     	}
 	printf("\n");
   }
