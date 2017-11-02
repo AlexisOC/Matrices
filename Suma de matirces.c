@@ -6,19 +6,35 @@ int main(){
   int i, j, t=0;
   for(i=0;i<3;i++){
     for(j=0;j<3;j++){
-      printf("Dame 1 numero para la primer matriz\n");
-      scanf("%d", & M1[i][j]);
-      printf("Dame 1 numero para la segunda matriz\n");
-      scanf("%d", & M1[i][j]);
+      printf("Da 2 numeros para operar matrices\n");
+      scanf("%d %d", & M1[i][j],&M2[i][j]);
     }
   }
-  for(i=0;i<3;i++){
-    for(j=0;j<3;j++){
-      t=M1[i][j]+M2[i][j];
-      M3[i][j]=t;
-      printf(" %d", M3[i][j]);
-      t=0;
-    }
-    printf("\n");
+for(i=0;i<3;i++){
+  	for(j=0;j<3;j++){
+  		printf("%d ",M1[i][j]);
+  	}
+  	if(i==1){
+	  
+  	printf("+ ");
+  }else{
+  	printf("\t");
+  }
+  	for(j=0;j<3;j++){
+  		printf("%d ",M2[i][j]);
+	}
+	if(i==1){
+	  
+  	printf("= ");
+  }else{
+  	printf("\t");
+  }
+	for(j=0;j<3;j++){
+      	t=M1[i][j]+M2[i][j];
+      	M3[i][j]=t;
+      	printf("%d ", M3[i][j]);
+      	t=0;
+    	}
+	printf("\n");
   }
 }
